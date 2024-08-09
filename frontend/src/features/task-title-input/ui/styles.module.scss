@@ -1,0 +1,31 @@
+.task-title-input {
+  flex: 1 1 30%;
+  border: 1px #638bb3 solid;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+.task-title-input[data-valid="false"] {
+  border-color:#d62a2a;
+  animation: shake 0.2s ease-in-out 0s 2;
+}
+
+.task-title-input[data-valid="false"]::placeholder {
+	color: #b92323;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+  25% {
+    margin-left: 0.5rem;
+  }
+  75% {
+    margin-left: -0.5rem;
+  }
+  100% {
+    margin-left: 0rem;
+  }
+}

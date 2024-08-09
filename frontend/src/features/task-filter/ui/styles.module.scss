@@ -1,0 +1,38 @@
+.toggle-btn-wrapper {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle-btn-group {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  border: 1px #626264 solid;
+  border-radius: 10px;
+
+  & .toggle-btn:not(:last-child) {
+    border-right: 1px #626264 solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .toggle-btn {
+    color: #000000;
+	font-weight: 500;
+    cursor: pointer;
+    padding: 0.35rem 0.8rem;
+  }
+}
+
+.toggle-btn[data-active="todo-active"] {
+  color: #fcfcfc;
+  background-color: #193acf
+}
+
+.toggle-btn[data-active="done-active"] {
+  color: #fcfcfc;
+  background-color: #19cf37;
+}

@@ -1,0 +1,84 @@
+.task {
+  height: 64px;
+  border: 1px #626264 solid;
+  border-radius: 10px;
+  padding: 0 1rem;
+}
+
+.task-header {
+  display: flex;
+  gap: 32px;
+  height: 64px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-content {
+	display: flex;
+	gap: 16px;
+	flex-direction: column;
+	padding-top: 0.5rem;
+	padding-bottom: 1.15rem;
+}
+
+.task-input {
+  flex: 1;
+  border-radius: 10px;
+  background-color: #fff;
+  outline-width: 1px;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.task-input:outl {
+	border-color: #293449;
+	border-width: 5px;
+}
+
+.textarea-wrapper {
+  position: relative;
+
+  & textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px #222428 solid;
+    resize: none;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    padding: 0.8rem 0.7rem 1.5rem 0.7rem;
+  }
+
+  & span {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-size: 0.85rem;
+  }
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.edit-btn {
+  flex: 1;
+  background-color: #222428;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.close-btn {
+  flex: 1;
+  background-color: #eb445a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.5rem;
+}

@@ -1,0 +1,23 @@
+.date-picker-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: end;
+}
+
+.date-picker-btn {
+  flex: 1;
+  width: 100%;
+  background-color: #275bc2;
+  font-size: 0.9rem;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.6rem;
+}
+
+.rdp-root {
+  --rdp-day-height: 8px;
+  --rdp-day-width: 8px;
+}

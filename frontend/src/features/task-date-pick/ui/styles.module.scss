@@ -1,0 +1,12 @@
+.task-date-picker { 
+  display: flex;
+  gap: 20%;
+
+  & div {
+	display: flex;
+    width: 100%;
+    gap: 12px;
+	flex-direction: column;
+  }
+}
+

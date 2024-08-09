@@ -1,7 +1,12 @@
 # Todo desktop app
 
 This is repository for todo desktop app.
+
 ![tasks](https://i.imgur.com/uijx20Q.png)
+
+## Download
+
+You can download the latest version of the app from the [Releases](https://github.com/erazr/wails-todoapp/releases/latest) page. Choose the appropriate file for your operating system.
 
 ## Used libraries
 
@@ -11,7 +16,18 @@ This is repository for todo desktop app.
 
 -  [Pocketbase](https://github.com/pocketbase/pocketbase) - embedded database (SQLite) with dashboard UI
 
-## Usage
+## Manual usage
+
+### Prerequisites
+
+- Go version 1.22.2
+- Wails version 2.9.0
+
+run the following command to check if you have the required version of Wails installed:
+
+```
+wails doctor
+```
 
 Cd into repository folder
 

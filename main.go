@@ -23,7 +23,7 @@ func main() {
 	err := wails.Run(&options.App{
 		Title:  "todo-app",
 		Width:  1024,
-		Height: 960,
+		Height: 1024,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},

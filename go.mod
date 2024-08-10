@@ -1,8 +1,6 @@
 module todo-app
 
-go 1.21
-
-toolchain go1.22.5
+go 1.22.5
 
 require (
 	github.com/pocketbase/dbx v1.10.1

@@ -6,7 +6,21 @@ This is repository for todo desktop app.
 
 ## Download
 
-You can download the latest version of the app from the [Releases](https://github.com/erazr/wails-todoapp/releases/latest) page. Choose the appropriate file for your operating system.
+You can download the latest version of the app from the [Releases](https://github.com/erazr/wails-todoapp/releases/latest) page. Choose the appropriate file for your operating system and follow the instructions.
+
+After following the instructions, download one of the executable files of the wails-to-do application listed at the very bottom, place it in the newly created folder and run it.
+
+You can open http://127.0.0.1:8080/_/ for pocketbase dashboard UI.
+
+Login with test credentials:
+- test@example.com
+- 1234567890
+
+![pb login](https://i.imgur.com/MQJsi8q.png)
+
+Dashboard
+
+![pb dashboard](https://i.imgur.com/iruT3m0.png)
 
 ## Used libraries
 
@@ -47,12 +61,6 @@ Open http://127.0.0.1:8080/_/ for [pocketbase](https://github.com/pocketbase/poc
 Login with test credentials:
 - test@example.com
 - 1234567890
-
-![pocketbase_login](https://i.imgur.com/MQJsi8q.png)
-
-Dashboard
-
-![pocketbase_dashboard](https://i.imgur.com/iruT3m0.png)
 
 ## Features
 

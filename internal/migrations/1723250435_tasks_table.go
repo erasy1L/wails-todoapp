@@ -86,6 +86,11 @@ func init() {
 			Required: false,
 		})
 
+		coll.Indexes = append(coll.Indexes,
+			"CREATE INDEX idx_tasks_status on tasks (status)",
+			"CREATE INDEX idx_tasks_priority on tasks (priority)",
+		)
+
 		return dao.SaveCollection(&coll)
 	}, func(db dbx.Builder) error {
 		// add down queries...

@@ -7,10 +7,10 @@ import (
 	"todo-app/internal/service"
 	"todo-app/pkg/log"
 
+	_ "todo-app/internal/migrations"
+
 	"github.com/pocketbase/pocketbase"
 	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
 	"github.com/pocketbase/pocketbase/plugins/migratecmd"
 )
 
@@ -25,7 +25,9 @@ func NewApp() *App {
 
 	pb := pocketbase.New()
 
-	migratecmd.MustRegister(pb, pb.RootCmd, migratecmd.Config{})
+	migratecmd.MustRegister(pb, pb.RootCmd, migratecmd.Config{
+		TemplateLang: "go",
+	})
 
 	if err := pb.Bootstrap(); err != nil {
 		logger.Fatal().Msg("could not bootstrap pocketbase")
@@ -34,10 +36,6 @@ func NewApp() *App {
 
 	taskRepository := repository.NewTaskRepository(pb.Dao())
 	taskService := service.NewTaskService(taskRepository)
-
-	if err := createInitialAdmin(pb.Dao()); err != nil {
-		logger.Err(err).Msg("could not create initial admin")
-	}
 
 	go func() {
 		_, err := apis.Serve(pb, apis.ServeConfig{
@@ -81,19 +79,4 @@ func (a *App) UpdateTask(id string, req task.Request) error {
 
 func (a *App) DeleteTask(id string) error {
 	return a.taskService.Delete(a.ctx, id)
-}
-
-func createInitialAdmin(dao *daos.Dao) error {
-	admin := &models.Admin{}
-
-	email := "test@example.com"
-
-	if admin, _ := dao.FindAdminByEmail(email); admin != nil {
-		return nil
-	}
-
-	admin.Email = email
-	admin.SetPassword("1234567890")
-
-	return dao.SaveAdmin(admin)
 }

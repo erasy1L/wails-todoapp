@@ -48,7 +48,11 @@ Login with test credentials:
 - test@example.com
 - 1234567890
 
-![pocketbase_dashboard](https://i.imgur.com/MQJsi8q.png)
+![pocketbase_login](https://i.imgur.com/MQJsi8q.png)
+
+Dashboard
+
+![pocketbase_dashboard](https://i.imgur.com/iruT3m0.png)
 
 ## Features
 

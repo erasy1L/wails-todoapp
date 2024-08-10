@@ -6,9 +6,13 @@ This is repository for todo desktop app.
 
 ## Download
 
-You can download the latest version of the app from the [Releases](https://github.com/erazr/wails-todoapp/releases/latest) page. Choose the appropriate file for your operating system and follow the instructions.
+You can download the latest version of the app from the [Releases](https://github.com/erazr/wails-todoapp/releases/latest) page. Choose the appropriate file for your operating system.
 
-After following the instructions, download one of the executable files of the wails-to-do application listed at the very bottom, place it in the newly created folder and run it.
+Prerequisites
+
+- [WebvView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+
+After installing the prerequisites, place the downloaded wails-todoapp in the newly created folder and run it.
 
 You can open http://127.0.0.1:8080/_/ for pocketbase dashboard UI.
 
